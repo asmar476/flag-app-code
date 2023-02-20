@@ -33,7 +33,7 @@ function Navbar() {
     <div className="ant-row">
     <Row>
       <Col span={12}> 
-       <LogoSide />
+       <LogoSide mode={mode}/>
        </Col>
        <Col span={12}> 
           <DarkModeSide 

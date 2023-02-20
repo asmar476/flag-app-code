@@ -1,10 +1,12 @@
 import React from "react";
 import "../css/style.css"
-function LogoSide() {
+function LogoSide(props) {
   return (
-    <div className="logo-side">
+    <>
+        <div className={props.mode === 'dark' ? 'dark-mode' : ''}>
         <span className="titleName">Where in the world?</span>
-    </div>
+        </div>
+    </>
   );
 }
 

@@ -1,23 +1,4 @@
-.ant-row{background-color: blue;
-    height: 50px;
-  
-}
-.logo-side{
- display: flex;
-align-items: center;
-padding: 15px 0;
-}
-.titleName{
-    padding-left: 50px;
-    font-size: 22px;
-    font-family: NunitoSans-ExtraBold;
-}
-.dark-mode {
-    background-color: black;
-    color: white;
-    }
-    
-    .light-mode {
+   .light-mode {
     background-color: white;
     color: black;
     }
