@@ -4,21 +4,46 @@ import "../css/style.css"
 import LogoSide from "../components/LogoSide";
 import DarkModeSide from "../components/DarkModeSide";
 function Navbar() {
-  const [counter, setCounter] = useState(0);
+  const [mode, setMode] = useState('light');
+  const [showText, setShowText] = useState('tamjid');
   useEffect(() => {
-     setCounter(counter);
-  }, [])
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode) {
+      setMode(savedMode);
+    }
+  }, []);
+  useEffect(() => {
+    const textMode = localStorage.getItem('text');
+    console.log("txtMode", textMode);
+    if (textMode) {
+      setShowText(textMode);
+    }
+  }, []);
+
+  const toggleMode = () => {
+    const newMode = mode === 'light' ? 'dark' : 'light';
+    setMode(newMode);
+    localStorage.setItem('mode', newMode);
+    const newText = showText === "tamjid" ? "asmar" : "tamjid";
+    setShowText(newText)
+    localStorage.setItem('text', newText);
+
+  }
   return (
     <div className="ant-row">
-    {/* <Row>
+    <Row>
       <Col span={12}> 
        <LogoSide />
        </Col>
        <Col span={12}> 
-    
+          <DarkModeSide 
+          toggleMode={toggleMode} 
+          mode={mode}
+          showText={showText} 
+          setShowText={setShowText} 
+          setMode={setMode} />
        </Col>
-    </Row>     */}
-    {counter}
+    </Row>    
     
     </div>
    
