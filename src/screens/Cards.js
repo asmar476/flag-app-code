@@ -5,6 +5,56 @@ import { Col, Row } from 'antd';
 const { Meta } = Card;
 
 function Cards() {
+  const cards = [
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    },
+    {
+      img:"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      title: "Europe Street beat",
+      description:"www.instagram.com"
+
+    }
+  ]
   const itemRender = (_, type, originalElement) => {
     if (type === 'prev') {
       return <a>Previous</a>;
@@ -17,66 +67,22 @@ function Cards() {
   return (
     <div className="Cards">
       <Row gutter={16}>
-    <Col span={8}>
-    <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
+  
+      {cards.map((card, i) => 
+        <Col span={8}>
+       <Card key={i}
+       hoverable
+       style={{ width: 240 }}
+       cover={<img alt="example" src={card.img} />}
+     >
+       <Meta title={card.title} description={card.description} />
+     </Card>
+     </Col>
+     )}
+   
 
-    </Col>
-    <Col span={8}>
-    <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-
-    </Col>
-    <Col span={8}>
-    <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-
-    </Col>
-    <Col span={8}>
-    <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-
-    </Col>
-    <Col span={8}>
-    <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-
-    </Col>
-    <Col span={8}>
-    <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-
-    </Col>
+   
+   
     </Row>
     <Pagination 
     // onChange={} 
