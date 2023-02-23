@@ -1,8 +1,10 @@
-import Main from './mainComponent/Main';
+import Navbar from './screens/Navbar';
 function App() {
   return (
     <div className="App">
-      <Main />  
+       <Navbar />
+              {/* <Searchbar />
+       <Cards /> */}
     </div>
   );
 }
